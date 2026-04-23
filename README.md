@@ -1,100 +1,93 @@
-# 🛍️ API Store — Tienda de Ropa
+# API Store — Fashion E-commerce
 
-Aplicación web tipo **e-commerce** desarrollada con **React + Vite** que consulta productos en tiempo real desde una API pública y los presenta en una interfaz moderna, responsive e interactiva.
+A modern, interactive e-commerce catalog built with **React + Vite** that fetches real-time product data from a public REST API. Features a fully functional shopping cart, dynamic filters, and a dark/light theme system.
 
-🔗 **Deploy en Vercel:** [URL del deploy — agregar después]  
-📁 **Repositorio:** [https://github.com/Matxd01/Tienda-mateo-API](https://github.com/Matxd01/Tienda-mateo-API)
-
----
-
-## 🚀 Tecnologías utilizadas
-
-- **React 18** — Librería principal para construir la interfaz con componentes
-- **Vite 5** — Herramienta de desarrollo y build ultrarrápida
-- **JavaScript ES6+** — Funciones flecha, destructuring, async/await, spread, map/filter
-- **CSS Variables** — Sistema de tema dark/light dinámico sin librerías externas
-- **DummyJSON API** — API pública gratuita que provee los datos de productos
+🔗 **Live Demo:** [https://e-commerce-con-react-.vercel.app](https://e-commerce-con-react-.vercel.app)
 
 ---
 
-## 📦 Instalación y uso local
+## Tech Stack
+
+- **React 18** — Component-based UI with hooks
+- **Vite 5** — Lightning-fast development and build tool
+- **JavaScript ES6+** — Arrow functions, destructuring, async/await, spread operator
+- **CSS Variables** — Dynamic dark/light theming without external libraries
+- **DummyJSON API** — Free public REST API for product data
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm 9+
+
+### Installation
 
 ```bash
-# 1. Clonar el repositorio
-git clone https://github.com/Matxd01/Tienda-mateo-API.git
-cd Tienda-mateo-API
+# Clone the repository
+git clone https://github.com/Matxd01/E-commerce-con-React-.git
+cd E-commerce-con-React-
 
-# 2. Instalar dependencias
+# Install dependencies
 npm install
 
-# 3. Iniciar servidor de desarrollo
+# Start the development server
 npm run dev
+```
 
-# 4. Abrir en el navegador
-# http://localhost:5173
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build for production
+
+```bash
+npm run build
+npm run preview
 ```
 
 ---
 
-## 🏗️ Estructura del proyecto
+## Project Structure
 
 ```
-src/
-├── components/
-│   ├── ProductCard.jsx   # Tarjeta de producto — componente reutilizable (template)
-│   └── Footer.jsx        # Pie de página — componente reutilizable
-├── App.jsx               # Componente principal con toda la lógica de estado
-├── main.jsx              # Punto de entrada de la aplicación React
-└── style.css             # Estilos globales con variables CSS (tema dark/light)
+├── index.html
+├── vite.config.js
+├── package.json
+└── src/
+    ├── main.jsx              # App entry point
+    ├── App.jsx               # Root component — state & logic
+    ├── style.css             # Global styles & CSS variables
+    └── components/
+        ├── ProductCard.jsx   # Reusable product card template
+        └── Footer.jsx        # Reusable footer component
 ```
 
 ---
 
-## ✅ Funcionalidades implementadas
+## Features
 
-### Vista de productos
-- Más de 15 productos cargados desde dummyjson.com
-- Cada producto muestra: imagen, nombre, precio, descripción y categoría
-
-### Componentes reutilizables
-- ProductCard — template independiente para cada producto
-- Footer — componente de pie de página
-- Navbar — barra superior con carrito y tema
-
-### Lógica y funciones (ES6+)
-- useState — estado del carrito, filtros, tema
-- useEffect — llamada a la API al montar
-- useMemo — filtrado eficiente de productos
-- Funciones para filtrar, ordenar y buscar en tiempo real
-
-### Carrito de compras
-- Agregar productos con talla seleccionada
-- Badge contador en navbar
-- Controles de cantidad y eliminar
-- Cálculo de subtotal, envío y total
-
-### UI y navegación
-- Filtros por categoría y búsqueda en tiempo real
-- Tema Dark / Light
-- Diseño 100% responsive
+- **Product catalog** — 15+ products loaded from a public API with image, name, price, description and category
+- **Reusable components** — `ProductCard`, `Footer` and `Navbar` as independent templates
+- **Shopping cart** — Add items with size selection, adjust quantities, remove items, shipping cost calculation
+- **Real-time filters** — Search by keyword, filter by category, stock-only toggle, and sorting options
+- **Dynamic theming** — Dark / Light mode and switchable accent colors via CSS Variables
+- **Fully responsive** — Adaptive grid layout for mobile, tablet and desktop
 
 ---
 
-## 🌐 API utilizada
+## API Reference
 
-**DummyJSON** (https://dummyjson.com) — API REST pública y gratuita
+Data is fetched from **[DummyJSON](https://dummyjson.com)** — a free, open REST API.
 
----
-
-## 📊 Rúbrica cubierta
-
-| Criterio | Puntos |
+| Endpoint | Description |
 |---|---|
-| Estructura React + Vite | 15 pts |
-| Componentes reutilizables | 20 pts |
-| Lógica y funciones ES6+ | 20 pts |
-| Funcionalidad e-commerce | 20 pts |
-| Diseño responsive | 10 pts |
-| Deploy Vercel | 5 pts |
-| Repositorio GitHub | 5 pts |
-| Creatividad | 5 pts |
+| `GET /products/category/mens-shirts` | Men's shirts |
+| `GET /products/category/mens-shoes` | Men's shoes |
+| `GET /products/category/womens-bags` | Women's bags |
+
+---
+
+## License
+
+This project was built for academic purposes. Feel free to use it as a reference.
